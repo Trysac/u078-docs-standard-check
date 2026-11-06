@@ -1,20 +1,20 @@
 /**
  * Public entry point of @trysac/docs-standard-check.
  *
- * Replace this placeholder with the utility's real API. Keep every export documented and covered by tests.
+ * Checks that a repository meets a documentation standard declared in a JSON
+ * manifest: required files, headings, forbidden literals and relative links.
  */
-
-/**
- * Builds a greeting for `name`.
- *
- * @param name - Who to greet. Surrounding whitespace is ignored.
- * @returns The greeting, for example `"Hello, Ada!"`.
- * @throws {TypeError} When `name` is empty after trimming.
- */
-export function greet(name: string): string {
-  const trimmed = name.trim();
-  if (trimmed === "") {
-    throw new TypeError("name must not be empty");
-  }
-  return `Hello, ${trimmed}!`;
-}
+export { checkRepo } from "./check.js";
+export type { DocsCheckErrorCode } from "./errors.js";
+export { DocsCheckError, ManifestError } from "./errors.js";
+export { formatFindings } from "./format.js";
+export { loadManifest } from "./manifest.js";
+export { createMemoryFs } from "./memory-fs.js";
+export { createNodeFs } from "./node-fs.js";
+export type {
+  FileSpec,
+  FileSystemPort,
+  Finding,
+  FindingCode,
+  Manifest,
+} from "./types.js";
