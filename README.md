@@ -1,7 +1,6 @@
 # docs-standard-check
 
-[![npm version](https://img.shields.io/npm/v/@trysac/docs-standard-check.svg)](https://www.npmjs.com/package/@trysac/docs-standard-check)
-[![license: MIT](https://img.shields.io/npm/l/@trysac/docs-standard-check.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CI](https://github.com/Trysac/u078-docs-standard-check/actions/workflows/ci.yml/badge.svg)](https://github.com/Trysac/u078-docs-standard-check/actions/workflows/ci.yml)
 
 CI check that a repository meets a declared documentation standard: required files, headings, forbidden placeholders and relative links.
@@ -12,9 +11,15 @@ An organisation defines a documentation standard (README sections, CHANGELOG, se
 
 ## Install
 
+Not published to npm yet. Build it from a clone, then install it from the local path:
+
 ```sh
-npm install @trysac/docs-standard-check
+git clone https://github.com/Trysac/u078-docs-standard-check.git
+cd u078-docs-standard-check && npm ci && npm run build
+cd ../your-project && npm install ../u078-docs-standard-check
 ```
+
+Imports keep the package name: `import { ... } from "@trysac/docs-standard-check"`.
 
 Requires Node.js 20 or newer. The package ships ES modules with TypeScript declarations and has no runtime dependencies.
 
